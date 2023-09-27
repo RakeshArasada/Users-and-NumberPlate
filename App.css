@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+button{
+  float: right;
+  background-color: 	#198754;
+  padding: 5px;
+  color: white;
+}
