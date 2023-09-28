@@ -50,9 +50,9 @@ function UsersList({ navigateToNumberPlate }) {
                 <td>{id}</td>
                 <td>{userData[id].name}</td>
                 <td>{userData[id].email}</td>
-                <td>{userData[id].contactno}</td> {/* Display Contact No */}
-                <td>{userData[id].usertype}</td> {/* Display User Type */}
-                <td>{userData[id].isverified}</td> {/* Display Is Verified */}
+                <td>{userData[id].contact_no}</td> {/* Display Contact No */}
+                <td>{userData[id].userType}</td> {/* Display User Type */}
+                <td>{userData[id].isVerified}</td> {/* Display Is Verified */}
                 {/* Add more table cells as needed */}
               </tr>
             ))}
@@ -107,24 +107,22 @@ function NumberPlate({ navigateToUsersList }) {
             <table className="table table-striped">
             <thead className="thead-dark">
             <tr>
-                <th className="bg-black text-white">ID</th>
-                <th className="bg-black text-white">Number Plate</th>
-                <th className="bg-black text-white">Wheeler Type</th>
-                <th className="bg-black text-white">Aadhar Front Image</th>
-                <th className="bg-black text-white">RC Front Image</th>
-                {/* Add more table headers as needed */}
+              <th className="bg-black text-white">ID</th>
+              <th className="bg-black text-white">Number Plate</th>
+              <th className="bg-black text-white">Aadhar Front Image</th>
+              <th className="bg-black text-white">RC Front Image</th>
+              <th className="bg-black text-white">User ID</th>
             </tr>
-            </thead>
-            <tbody>
-                {Object.keys(numberPlateData).map((id) => (
-                <tr key={id}>
-                    <td>{id}</td>
-                    <td>{numberPlateData[id].numberplate}</td>
-                    <td>{numberPlateData[id].wheelertype}</td>
-                    <td>{numberPlateData[id].AadharFrontImageUrl}</td>
-                    <td>{numberPlateData[id].RcFrontImageUrl}</td>
-                {/* Add more table cells as needed */}
-                </tr>
+          </thead>
+          <tbody>
+            {Object.keys(numberPlateData).map((id) => (
+              <tr key={id}>
+                <td>{id}</td>
+                <td>{numberPlateData[id]["number Plate"]}</td>
+                <td>{numberPlateData[id]["aadhaar Front Image"]}</td>
+                <td>{numberPlateData[id]["reFront ImageUri"]}</td>
+                <td>{numberPlateData[id]["userID"]}</td>
+              </tr>
             ))}
             </tbody>
         </table>
